@@ -3,10 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // console.log(ctx);
-window.addEventListener('resize', function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
+function draw() {
     ctx.fillStyle = '#B17F49';
     ctx.strokeStyle = '#DB9D5A';
     ctx.lineWidth = 10;
@@ -14,4 +11,12 @@ window.addEventListener('resize', function(){
     ctx.roundRect(10, 10, canvas.width-20, canvas.height-20, [15]);
     ctx.fillRect(10, 10, canvas.width-20, canvas.height-20);
     ctx.stroke();
+}
+
+draw();
+
+window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    draw();
 });
