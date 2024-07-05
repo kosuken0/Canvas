@@ -11,12 +11,10 @@ function draw() {
     ctx.roundRect(10, 10, canvas.width-20, canvas.height-20, [15]);
     ctx.fillRect(10, 10, canvas.width-20, canvas.height-20);
     ctx.stroke();
-}
-
-draw();
-
+};
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     draw();
 });
+draw();
