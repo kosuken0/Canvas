@@ -10,7 +10,7 @@ window.addEventListener('resize', function(){
 
 ctx.fillStyle = 'red';
 ctx.strokeStyle = 'red';
-ctx.lineWidth = 5;
+ctx.lineWidth = 15;
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, Math.Pi * 2);
+ctx.arc(100, 100, 50, 0, Math.PI * 2);
 ctx.stroke();
