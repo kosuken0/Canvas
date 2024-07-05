@@ -9,5 +9,8 @@ window.addEventListener('resize', function(){
 });
 
 ctx.fillStyle = 'red';
+ctx.strokeStyle = 'red';
 ctx.beginPath();
+ctx.lineWidth = 5;
 ctx.arc(100, 100, 50, 0, Math.Pi * 2);
+ctx.stroke();
