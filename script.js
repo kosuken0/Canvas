@@ -8,8 +8,8 @@ function draw() {
     ctx.strokeStyle = '#DB9D5A';
     ctx.lineWidth = 10;
     ctx.beginPath();
-    ctx.roundRect(10, 10, canvas.width-20, canvas.height-20, [15]);
-    ctx.fillRect(10, 10, canvas.width-20, canvas.height-20);
+    ctx.roundRect(30, 30, canvas.width-60, canvas.height-20, [15]);
+    ctx.fillRect(30, 30, canvas.width-60, canvas.height-20);
     ctx.stroke();
 };
 window.addEventListener('resize', function(){
