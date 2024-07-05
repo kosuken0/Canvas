@@ -9,7 +9,7 @@ function draw() {
     ctx.lineWidth = 10;
     ctx.beginPath();
     ctx.roundRect(20, 20, canvas.width - 40, canvas.height - 40, [15]);
-    ctx.fillRect(22.5, 22.5, canvas.width - 45, canvas.height - 45);
+    ctx.fill();
     ctx.stroke();
 };
 window.addEventListener('resize', function(){
