@@ -8,8 +8,8 @@ window.addEventListener('resize', function(){
     canvas.height = window.innerHeight;
 });
 
-ctx.fillStyle = 'red';
-ctx.strokeStyle = 'green';
+ctx.fillStyle = '#B17F49';
+ctx.strokeStyle = '#DB9D5A';
 ctx.lineWidth = 15;
 ctx.beginPath();
 ctx.roundRect(10, 10, 100, 150, [15]);
