@@ -6,12 +6,12 @@ canvas.height = window.innerHeight;
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-});
 
-ctx.fillStyle = '#B17F49';
-ctx.strokeStyle = '#DB9D5A';
-ctx.lineWidth = 15;
-ctx.beginPath();
-ctx.roundRect(10, 10, 100, 150, [15]);
-ctx.fillRect(10, 10, 100, 150);
-ctx.stroke();
+    ctx.fillStyle = '#B17F49';
+    ctx.strokeStyle = '#DB9D5A';
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.roundRect(10, 10, 100, 150, [15]);
+    ctx.fillRect(10, 10, 100, 150);
+    ctx.stroke();
+});
