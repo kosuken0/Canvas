@@ -11,7 +11,7 @@ window.addEventListener('resize', function(){
     ctx.strokeStyle = '#DB9D5A';
     ctx.lineWidth = 15;
     ctx.beginPath();
-    ctx.roundRect(10, 10, 100, 150, [15]);
-    ctx.fillRect(10, 10, 100, 150);
+    ctx.roundRect(10, 10, canvas.width - 20, canvas.height - 20, [15]);
+    ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
     ctx.stroke();
 });
