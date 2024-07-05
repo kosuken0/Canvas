@@ -4,12 +4,12 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // console.log(ctx);
 function draw() {
-    ctx.fillStyle = '#B17F49';
-    ctx.strokeStyle = '#DB9D5A';
+    ctx.fillStyle = '#DB9D5A';
+    ctx.strokeStyle = '#B17F49';
     ctx.lineWidth = 10;
     ctx.beginPath();
-    ctx.roundRect(30, 30, canvas.width-60, canvas.height-20, [15]);
-    ctx.fillRect(30, 30, canvas.width-60, canvas.height-20);
+    ctx.roundRect(20, 20, canvas.width - 40, canvas.height - 40, [15]);
+    ctx.fillRect(20, 20, canvas.width - 40, canvas.height - 40);
     ctx.stroke();
 };
 window.addEventListener('resize', function(){
