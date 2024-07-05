@@ -1,6 +1,13 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 console.log(ctx);
+window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
 
-ctx.fillstyle = 'white';
-ctx.fillRect(10, 10, 50, 50);
+ctx.fillStyle = 'red';
+ctx.beginPath();
+ctx.arc(100, 100, 50, 0, Math.Pi * 2);
