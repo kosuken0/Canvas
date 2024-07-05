@@ -12,5 +12,6 @@ ctx.fillStyle = 'red';
 ctx.strokeStyle = 'green';
 ctx.lineWidth = 15;
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, Math.PI * 2);
+ctx.roundRect(10, 10, 100, 150, [15]);
+ctx.fillRect(10, 10, 100, 150);
 ctx.stroke();
