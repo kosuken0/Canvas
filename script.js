@@ -12,6 +12,12 @@ function drawcont(x, y, width, height, borderw, round, bordercol, fillcol){
     ctx.fill();
     ctx.stroke();
 }
+function petalc(x, y, size, round, fillcol){
+    ctx.fillStyle = fillcol;
+    ctx.beginPath();
+    ctx.roundRect(x, y, size, size, [round]);
+    ctx,fill();
+}
 function draw() {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawcont(20, 20, canvas.width-40, canvas.height-40, 10, 15, '#B17F49', '#DB9D5A');
