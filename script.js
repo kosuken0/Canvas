@@ -19,7 +19,7 @@ function draw() {
     drawcont(35, 35, canvas.width*0.5-45, canvas.height*0.75-45, 10, 15, '#b17f49', '#db9d5a');
     drawcont(canvas.width*0.5+10, 35, canvas.width*0.5-45, canvas.height*0.75-45, 10, 15, '#b17f49', '#db9d5a');
     drawcont(35, canvas.height*0.75+10, canvas.width-70, canvas.height*0.25-45, 10, 15, '#b17f49', '#db9d5a');
-    drawcont(50, canvas.height*0.75+25, canvas.height*0.25-60, canvas.height*0.25-60, 5, 10, '#b17f49', '#b17f49');
+    drawcont(50, canvas.height*0.75+25, canvas.height*0.25-75, canvas.height*0.25-75, 5, 10, '#b17f49', '#b17f49');
 };
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
