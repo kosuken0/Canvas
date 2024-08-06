@@ -2,7 +2,40 @@ const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-// console.log(ctx);
+console.log(ctx);
+/*
+ctx.fillStyle = '#2bffa3';
+ctx.strokeStyle = '#23CF84';
+ctx.font = '70px ubuntu';
+ctx.textAlign = 'center';
+
+const maxTextWidth = canvas.width*0.5;
+
+function wrapText(text){
+    let linesArray = [];
+    let lineCounter = 0;
+    let line = '';
+    let words = text.split(' ');
+    for (let i = 0; i < words.length; i++){
+        let testLine = line + words[i] + ' ';
+        if (ctx.measureText(testLine).width > maxTextWidth){
+            line = words[i] + ' ';
+            lineCounter++;
+        }else{
+            line = testLine;
+        }
+        linesArray[lineCounter] = line;
+    }
+    linesArray.forEach((el, index) =>{
+        ctx.fillText(el, canvas.width/2, canvas.height/2 + index * 70);
+    });
+
+}
+
+wrapText('multiline text is a pain');
+*/
+
+
 function drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol){
     ctx.strokeStyle = bordercol;
     ctx.fillStyle = fillcol;
@@ -33,6 +66,7 @@ function draw() {
     drawcont(canvas.width*0.5+10+230, canvas.height-50, canvas.width*0.5+10+330, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
     drawcont(canvas.width*0.5+10+345, canvas.height-50, canvas.width*0.5+10+445, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
     drawcont(canvas.width*0.5+10+460, canvas.height-50, canvas.width*0.5+10+560, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
+
 };
 
 window.addEventListener('resize', function(){
@@ -41,7 +75,6 @@ window.addEventListener('resize', function(){
     draw();
 });
 draw();
-
 
 
 /*
