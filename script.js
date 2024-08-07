@@ -71,7 +71,7 @@ function draw() {
     drawcont(canvas.width*0.5+10+345, canvas.height-50, canvas.width*0.5+10+445, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
     drawcont(canvas.width*0.5+10+460, canvas.height-50, canvas.width*0.5+10+560, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
 
-    textLot('delete asia', 50, 70, 'left', 'alphabetical', canvas.width/2-50, 40, 1, 'white', 'black')
+    textLot('delete asia, this is a placeholder text. lorem ipsuem dolor si amet', 50, 50, 'left', 'top', canvas.width/2-50, 40, 1, 'white', 'black')
 };
 
 window.addEventListener('resize', function(){
