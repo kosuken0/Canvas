@@ -7,7 +7,7 @@ console.log(ctx);
 function textLot(text, X, Y, Aligntext, TextWidthMax, textSize, borderSize, textCol, textOutline){
     ctx.fillStyle = textCol;
     ctx.strokeStyle = textOutline;
-    ctx.font = textSize + 'px ubuntu';
+    ctx.font = 'bold ' + textSize + 'px ubuntu';
     ctx.textAlign = Aligntext;
     ctx.lineWidth = borderSize;
 
