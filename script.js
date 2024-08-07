@@ -51,7 +51,7 @@ function drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol){
 function draw() {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
     //drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol);
-    //textLot(text, X, Y, Aligntext, TextWidthMax, textCol, textOutline, textSize);
+    //textLot(text, X, Y, Aligntext, TextWidthMax, textSize, borderSize, textCol, textOutline);
     drawcont(20, 20, canvas.width-20, canvas.height-20, 10, 15, '#B17F49', '#DB9D5A');
     drawcont(35, 35, canvas.width*0.5-10, canvas.height-150-30, 10, 15, '#b17f49', '#db9d5a');
     drawcont(canvas.width*0.5+10, 35, canvas.width-35, canvas.height-150-30, 10, 15, '#b17f49', '#db9d5a');
@@ -70,7 +70,7 @@ function draw() {
     drawcont(canvas.width*0.5+10+345, canvas.height-50, canvas.width*0.5+10+445, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
     drawcont(canvas.width*0.5+10+460, canvas.height-50, canvas.width*0.5+10+560, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
 
-    textLot('delete asia', 50, 70, 'left', canvas.width/2-50, 30, 1, 'white', 'black')
+    textLot('delete asia', 50, 70, 'left', canvas.width/2-50, 60, 1, 'white', 'black')
 };
 
 window.addEventListener('resize', function(){
