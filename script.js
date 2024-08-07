@@ -3,38 +3,40 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 console.log(ctx);
-/*
-ctx.fillStyle = '#2bffa3';
-ctx.strokeStyle = '#23CF84';
-ctx.font = '70px ubuntu';
-ctx.textAlign = 'center';
 
-const maxTextWidth = canvas.width*0.5;
+function textLot(text, X, Y, Aligntext, TextWidthMax, textSize, borderSize, textCol, textOutline){
+    ctx.fillStyle = textCol;
+    ctx.strokeStyle = textOutline;
+    ctx.font = textSize + 'px ubuntu';
+    ctx.textAlign = Aligntext;
+    ctx.lineWidth = borderSize;
 
-function wrapText(text){
-    let linesArray = [];
-    let lineCounter = 0;
-    let line = '';
-    let words = text.split(' ');
-    for (let i = 0; i < words.length; i++){
-        let testLine = line + words[i] + ' ';
-        if (ctx.measureText(testLine).width > maxTextWidth){
-            line = words[i] + ' ';
-            lineCounter++;
-        }else{
-            line = testLine;
+    const maxTextWidth = TextWidthMax;
+
+    function wrapText(text){
+        let linesArray = [];
+        let lineCounter = 0;
+        let line = '';
+        let words = text.split(' ');
+        for (let i = 0; i < words.length; i++){
+            let testLine = line + words[i] + ' ';
+            if (ctx.measureText(testLine).width > maxTextWidth){
+                line = words[i] + ' ';
+                lineCounter++;
+            }else{
+                line = testLine;
+            }
+            linesArray[lineCounter] = line;
         }
-        linesArray[lineCounter] = line;
+        linesArray.forEach((el, index) =>{
+            ctx.fillText(el, X, Y + index * textSize);
+            ctx.strokeText(el, X, Y + index * textSize);
+
+        });
+
     }
-    linesArray.forEach((el, index) =>{
-        ctx.fillText(el, canvas.width/2, canvas.height/2 + index * 70);
-    });
-
+    wrapText(text)
 }
-
-wrapText('multiline text is a pain');
-*/
-
 
 function drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol){
     ctx.strokeStyle = bordercol;
@@ -49,6 +51,7 @@ function drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol){
 function draw() {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
     //drawcont(x, y, x2, y2, borderw, round, bordercol, fillcol);
+    //textLot(text, X, Y, Aligntext, TextWidthMax, textCol, textOutline, textSize);
     drawcont(20, 20, canvas.width-20, canvas.height-20, 10, 15, '#B17F49', '#DB9D5A');
     drawcont(35, 35, canvas.width*0.5-10, canvas.height-150-30, 10, 15, '#b17f49', '#db9d5a');
     drawcont(canvas.width*0.5+10, 35, canvas.width-35, canvas.height-150-30, 10, 15, '#b17f49', '#db9d5a');
@@ -67,6 +70,7 @@ function draw() {
     drawcont(canvas.width*0.5+10+345, canvas.height-50, canvas.width*0.5+10+445, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
     drawcont(canvas.width*0.5+10+460, canvas.height-50, canvas.width*0.5+10+560, canvas.height-150, 10, 15, '#53A4A8', '#62C1C6');
 
+    textLot('delete asia', 50, 70, 'left', canvas.width/2-50, 30, 1, 'white', 'black')
 };
 
 window.addEventListener('resize', function(){
@@ -89,6 +93,10 @@ uwu
 
 radiant colours:
 '#B63888', '#F34BB5'
+
+super colours:
+
+'#23CF84', '2bffa3'
 
 i have colors online at 
 https://www.pixilart.com/palettes/florr-rarities-91521
